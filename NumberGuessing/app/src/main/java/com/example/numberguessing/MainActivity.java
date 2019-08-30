@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity
         if (user_guess > 20 || user_guess < 0)
         {
             message = "Please enter a value between 0 to 20.";
-            guess_count = guess_count + 1;
         }
         else if(user_guess > randomNumber)
         {
