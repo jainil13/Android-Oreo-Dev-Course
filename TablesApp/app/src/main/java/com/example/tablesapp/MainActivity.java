@@ -24,10 +24,12 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 number.clear();
-                int min = 2;
-                if(progress<min){
+                number.clear();
+                seekBar.setProgress(2);
+                if(progress<2){
                     seekBar.setProgress(2);
                 }
+                progress = progress+2;
                 int num=1;
                 while(num<=10){
                     number.add(" "+num*progress);
@@ -59,37 +61,21 @@ public class MainActivity extends AppCompatActivity
         seekBar = findViewById(R.id.seekBar);
         seekBar.setMax(20);
         seekBar.setProgress(9);
+        int num=1;
+        while(num<=10){
+            number.add(" "+num*seekBar.getProgress());
+            num++;
+        }
+        listView = findViewById(R.id.listView);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, number);
+        listView.setAdapter(arrayAdapter);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 number.clear();
-                int min = 2;
-                if(progress<min){
+                if(progress<2){
                     seekBar.setProgress(2);
                 }
-                int num=1;
-                while(num<=10){
-                    number.add(" "+num*seekBar.getProgress());
-                    num++;
-                }
-                listView = findViewById(R.id.listView);
-                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1, number);
-                listView.setAdapter(arrayAdapter);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-                number.clear();
                 int num=1;
                 while(num<=10){
                     number.add(" "+num*seekBar.getProgress());
