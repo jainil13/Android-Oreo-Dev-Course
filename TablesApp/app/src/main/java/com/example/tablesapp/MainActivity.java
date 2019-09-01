@@ -24,12 +24,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 number.clear();
-                number.clear();
                 seekBar.setProgress(2);
-                if(progress<2){
-                    seekBar.setProgress(2);
-                }
-                progress = progress+2;
                 int num=1;
                 while(num<=10){
                     number.add(" "+num*progress);
