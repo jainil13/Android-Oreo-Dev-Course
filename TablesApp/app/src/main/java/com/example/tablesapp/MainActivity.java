@@ -91,6 +91,6 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
-        Toast.makeText(this, "Change the slider above to change the times tables value!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Change the slider to change the times tables value!", Toast.LENGTH_LONG).show();
     }
 }
