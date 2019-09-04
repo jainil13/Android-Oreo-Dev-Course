@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity
         EditText nameEditText = (EditText) findViewById(R.id.nameEditText);
         EditText pwd = (EditText) findViewById(R.id.pwd);
 
-        Log.i("info", "Button Clicked!");
+        Log.i("info", "Button was clicked!");
         Log.i("username:", nameEditText.getText().toString());
         Log.i("password", pwd.getText().toString());
 
