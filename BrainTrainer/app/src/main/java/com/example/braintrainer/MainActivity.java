@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     Button playButton;
     Button button0, button1, button2, button3;
     int score = 0;
-    int a,b;
+    int a;
+    int b;
     int numberOfQuestions = 0;
     public void chooseAnswer(View view)
     {
