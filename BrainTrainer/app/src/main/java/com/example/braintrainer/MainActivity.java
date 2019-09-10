@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     Button button2;
     Button button3;
     int score = 0;
-    int a,b;
+    int a;
+    int b;
     int numberOfQuestions = 0;
     public void chooseAnswer(View view)
     {
