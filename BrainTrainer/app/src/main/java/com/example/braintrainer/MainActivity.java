@@ -25,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
     TextView sumTextView;
     TextView timerTextView;
     Button playButton;
-    Button button0, button1, button2, button3;
+    Button button0;
+    Button button1;
+    Button button2;
+    Button button3;
     int score = 0;
     int a,b;
     int numberOfQuestions = 0;
